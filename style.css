@@ -1,0 +1,458 @@
+/* Général */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-color: #121212;
+}
+
+/* En-tête */
+.hero {
+    text-align: center;
+    background: linear-gradient(to bottom, #000, #444);
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+/* Navigation */
+nav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+nav li {
+    position: relative;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #111;
+}
+
+/* Sous-menu */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #222;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+nav li:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    display: block;
+}
+
+.submenu a {
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.submenu a:hover {
+    background-color: #444;
+}
+
+/* Section Albums */
+.albums {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.albums h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.album-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.album {
+    background: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.album:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.album img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.3s ease;
+}
+
+.album img:hover {
+    transform: scale(1.05);
+}
+
+.album h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.album p {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.album a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Tracklist */
+.tracklist {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #333;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.tracklist ol {
+    padding-left: 20px;
+}
+
+.tracklist li {
+    margin: 5px 0;
+}
+
+.tracklist a {
+    color: white;
+    text-decoration: none;
+}
+
+.tracklist a:hover {
+    text-decoration: underline;
+    color: #ffcc00;
+}
+
+/* Liens avec logos sociaux */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;  /* Ajoute un espacement entre les logos et le bouton Accueil */
+}
+
+.social-link {
+    display: inline-block;
+}
+
+.social-icon {
+    width: 40px; /* Largeur des logos */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover .social-icon {
+    transform: scale(1.1); /* Zoom léger au survol */
+}
+
+/* Bouton */
+.button {
+    display: inline-block;
+    background-color: white;
+    color: #121212;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #ffcc00;
+    color: #121212;
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #000;
+    color: #fff;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+/* Avertissement */
+.warning {
+    background-color: red;  /* Fond rouge */
+    color: white;  /* Texte en blanc */
+    padding: 10px 20px;  /* Espacement interne */
+    border-radius: 5px;  /* Coins arrondis */
+    font-weight: bold;  /* Texte en gras */
+    text-align: center;  /* Texte centré */
+    width: 100%;  /* Largeur de 100% pour occuper toute la ligne */
+    box-sizing: border-box;  /* Inclut le padding dans la largeur totale */
+    position: relative;  /* Position relative pour s'assurer que le texte reste bien centré */
+    margin: 20px 0;
+}
+
+/* Amélioration des marges et du positionnement */
+.album img:hover {
+    transform: scale(1.05); /* Effet de zoom pour les images des albums */
+}
+
+/* Pour les liens externes */
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ffcc00;
+}
+
+/* Style CSS */
+nav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    position: relative;
+}
+
+nav a {
+    display: block;
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-link:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    text-align: left;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Général */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-color: #121212;
+}
+
+/* Navigation */
+nav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+nav li {
+    position: relative;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #111;
+}
+
+/* Sous-menu */
+.dropdown-menu {
+    display: none;  /* Cache le sous-menu par défaut */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 160px;
+}
+
+.dropdown-link:hover .dropdown-menu {
+    display: block;  /* Affiche le sous-menu au survol de "Discographie" */
+}
+
+.dropdown-menu li {
+    text-align: left;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: #555;  /* Change la couleur au survol des liens */
+}
+
+/* Section Albums */
+.albums {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.albums h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+nav {
+    background-color: #333;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu > li {
+    position: relative;
+}
+
+.menu a {
+    display: block;
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #575757;
+}
+
+/* Sous-menu caché */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    min-width: 200px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.dropdown-menu li a {
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #575757;
+}
+
+/* Affiche le sous-menu au survol */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
